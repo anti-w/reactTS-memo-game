@@ -1,4 +1,5 @@
-import { Card } from "../../components/Card";
+import { Grid } from "../../components/Grid";
+import { cards } from "../../data/cards";
 import "./styles.css";
 
 const handleClick = (id: string) => {
@@ -7,10 +8,8 @@ const handleClick = (id: string) => {
 
 function App() {
   return (
-    <div>
-      <Card back="🥷🏽" id="1" flipped handleClick={handleClick} />
-      <Card back="🥷🏽" id="2" handleClick={handleClick} />
-      <Card back="🥷🏽" id="3" handleClick={handleClick} />
+    <div className="app">
+      <Grid cards={cards} />
     </div>
   );
 }
